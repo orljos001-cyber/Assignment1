@@ -1,10 +1,10 @@
 project:
   type: book
   render:
-  - index.qmd
-  - Prac1.qmd
-  - Prac3.qmd
-  - Prac4.qmd
+    - index.qmd
+    - Prac1.qmd
+    - Prac3.qmd
+    - Prac4.qmd
   output-dir: docs
   
 book:
@@ -17,10 +17,10 @@ book:
     search: true
     background: light
   chapters:
-  - index.qmd
-  - Prac1.qmd
-  - Prac3.qmd
-  - Prac4.qmd
+    - index.qmd
+    - Prac1.qmd
+    - Prac3.qmd
+    - Prac4.qmd
   
 format:
   html:

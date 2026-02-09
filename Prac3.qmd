@@ -1,0 +1,44 @@
+---
+title: "Prac3"
+format: html
+editor: visual
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Prac 3
+
+### Question 4
+```{r}
+x = seq(-2,2, by = 0.1)
+plot(x, sin(x), type = "l")
+```
+
+### Question 5
+
+```{r}
+library(car)
+#attempt
+t_dist_set = sort(rt(1000,1))
+theoretical_pop = sort(rnorm(1000000))
+quantiles = theoretical_pop[seq(1,1000000, length.out = 1000)] 
+envelope_matrix = matrix(NA, nrow = 1000, ncol = 1000)
+# replicate fn
+for(i in 1:1000){
+  
+  envelope_matrix[i, ] = sort(rnorm(1000))
+}
+
+lower_bound = apply(envelope_matrix, 2, quantile, probs = 0.025)
+upper_bound =  apply(envelope_matrix, 2, quantile, probs = 0.975)
+
+plot(quantiles, t_dist_set, ylim = c(-5, 5), xlim = c(-3, 3))
+abline(a = 0, b = 1, col = "blue")
+lines(quantiles, lower_bound, col = "blue", lty = 2)
+lines(quantiles, upper_bound, col = "blue", lty = 2)
+qqPlot(t_dist_set, envelope = 0.95, ylim = c(-5, 5))
+
+```
+

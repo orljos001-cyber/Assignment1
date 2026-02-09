@@ -1,0 +1,12 @@
+---
+title: "Home"
+format: html
+editor: visual
+---
+
+## Home page
+This quarto document contains my: 
+  practical 1
+  practical 3, questions 4 and 5
+  practical 4
+

@@ -1,0 +1,30 @@
+project:
+  type: book
+  render:
+  - index.qmd
+  - Prac1.qmd
+  - Prac3.qmd
+  - Prac4.qmd
+  output-dir: docs
+  
+book:
+  title: Statistical Computing
+  sidebar:
+    border: true
+    background: light
+    position: right
+  navbar:
+    search: true
+    background: light
+  chapters:
+  - index.qmd
+  - Prac1.qmd
+  - Prac3.qmd
+  - Prac4.qmd
+  
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    toc-location: left

@@ -1,0 +1,52 @@
+---
+title: "Prac1"
+format: html
+editor: visual
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Practical 1
+
+### Question 1
+
+```{r}
+data = airquality
+summary(airquality)
+
+data[!complete.cases(data),]
+```
+
+### Question 2
+
+```{r}
+mean(data$Ozone, na.rm = TRUE)
+sd(data$Ozone, na.rm = TRUE)
+min(data$Ozone, na.rm = TRUE)
+max(data$Ozone, na.rm = TRUE)
+
+mean(data$Temp, na.rm = TRUE)
+sd(data$Temp, na.rm = TRUE)
+min(data$Temp, na.rm = TRUE)
+max(data$Temp, na.rm = TRUE)
+```
+
+### Question 3
+
+```{r}
+cars_data = cars
+Y = cars_data$dist
+X = cbind(1, cars$speed)
+transpose = t(X)
+beta = ((solve(transpose %*% X)%*%transpose) %*% Y)
+beta
+```
+
+### Question 4
+
+```{r}
+lr = lm(dist ~ speed, data = cars)
+summary(lr)
+```
